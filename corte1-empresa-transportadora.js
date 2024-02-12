@@ -57,7 +57,7 @@ let totalDimensiones = 0;
 let totalImpuestos = 0;
 let totalDelFlete = 0;
 let promedioDelCostoDeProductos = 0;
-let mayorDimensiones = 0;
+let productoMayorDimensiones = 0;
 
 for (let i = 1; i <= cantidadDeEmpaques; i++) {
     var anchoDelPaquete = +readlineSync.question(`Cual es el ancho del paquete ${i} en cm: `);
@@ -77,8 +77,8 @@ for (let i = 1; i <= cantidadDeEmpaques; i++) {
 
     totalImpuestos += impuestosDelPaquete;
 
-    if (calculoDeDimensiones > mayorDimensiones) {
-        mayorDimensiones = calculoDeDimensiones;
+    if (calculoDeDimensiones > productoproductoMayorDimensiones) {
+        productoMayorDimensiones = calculoDeDimensiones;
         numeroMayorDimension = i;
     }
 }
