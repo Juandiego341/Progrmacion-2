@@ -77,7 +77,7 @@ for (let i = 1; i <= cantidadDeEmpaques; i++) {
 
     totalImpuestos += impuestosDelPaquete;
 
-    if (calculoDeDimensiones > productoproductoMayorDimensiones) {
+    if (calculoDeDimensiones > productoMayorDimensiones) {
         productoMayorDimensiones = calculoDeDimensiones;
         numeroMayorDimension = i;
     }
