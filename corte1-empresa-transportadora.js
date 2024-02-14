@@ -59,7 +59,7 @@ let totalDelFlete = 0;
 let promedioDelCostoDeProductos = 0;
 let productoMayorDimensiones = 0;
 
-for (let i = 1; i <= cantidadDeEmpaques; i++) {
+for (let i = 1; i = cantidadDeEmpaques; i++) {
     var anchoDelPaquete = +readlineSync.question(`Cual es el ancho del paquete ${i} en cm: `);
     var alturaPaquete = +readlineSync.question(`Ingrese la altura del paquete ${i} en cm: `);
     var profundidadDelPaquete = +readlineSync.question(`Cual es la profundidad del paquete ${i} en cm: `);
