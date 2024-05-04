@@ -41,7 +41,7 @@ let subsidioSector = 0;
 let numEmpleados;
 while (true) {
     numEmpleados = +readlineSync.question("Cantidad de empleados: ");
-    if (!isNaN(numEmpleados) && numEmpleados > 0) {
+    if (isNaN(numEmpleados) && numEmpleados > 0) {
         break;
     }
     console.error('El valor a ingresar debe ser un número positivo. Inténtelo nuevamente.');
