@@ -3,7 +3,7 @@ const readlineSync = require('readline-sync');
 let subsidioHijosPrimaria;
 while (true) {
     subsidioHijosPrimaria = +readlineSync.question("Subsidio para hijos en primaria: ");
-    if (isNaN(subsidioHijosPrimaria) && subsidioHijosPrimaria >= 0) {
+    if (isNaN(subsidioHijosPrimaria) && subsidioHijosPrimaria > 0) {
         break;
     }
     console.error('El valor a ingresar debe ser un número positivo. Inténtelo nuevamente.');
@@ -36,6 +36,7 @@ let costoSubsidioSecundaria = 0;
 let costoPasajesExtranjeros = 0;
 let subsidioEstrato = 0;
 let subsidioSector = 0;
+
 
 let numEmpleados;
 while (true) {
@@ -113,6 +114,7 @@ for (let i = 1; i <= numEmpleados; i++) {
 
     let subsidioHijos = subsidioHijosPrimaria * hijosPrimaria + subsidioHijosSecundaria * hijosSecundaria + subsidioHijosUniversidad * hijosUniversidad;
     let costoEmpleado = salario + subsidioEstrato + subsidioSector + subsidioHijos;
+    let promedioHijosEnUniversidad = numEmpleados/hijosUniversidad;
 
     totalNomina += costoEmpleado;
     if (genero.toLowerCase() === "m") {
@@ -139,3 +141,4 @@ console.log("3. Costo de la nómina de las mujeres:", nominaMujeres);
 console.log("4. Empleado que más dinero le cuesta:", nombreEmpleado);
 console.log("5. Dinero gastado en subsidios para hijos en secundaria:", costoSubsidioSecundaria);
 console.log("6. Dinero gastado en pasajes para empleados extranjeros:", costoPasajesExtranjeros);
+console.log ("7. el promedio de los hijos en universidad es",promedioHijosEnUniversidad);
